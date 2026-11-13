@@ -1,0 +1,309 @@
+
+:root {
+    --petal-pink: #F7C9D9;
+    --butter-yellow: #FFE6A7;
+    --lavender: #D9C9F3;
+    --sage: #CDE5D1;
+    --cream: #FFF8ED;
+    --ink: #51434A;
+    --muted: #81747A;
+    --poppy: #D8799F;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Nunito', sans-serif;
+}
+
+h1, h2, h3, .brand-name, .section-title {
+    font-family: 'Fredoka', sans-serif;
+}
+
+.brand-name {
+    color: #C86691;
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+
+.nav-link {
+    color: var(--ink);
+    font-weight: 700;
+}
+
+.nav-link:hover {
+    color: var(--poppy);
+}
+
+.hero {
+    background: linear-gradient(125deg, #FCE0E9, #FFF0C9 58%, #E8DDF8);
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    color: #754C61;
+}
+
+.eyebrow {
+    color: #A65E7D;
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+}
+
+.section-title {
+    color: #85566D;
+}
+
+.btn-poppy {
+    background: var(--poppy);
+    border: 0;
+    border-radius: 999px;
+    color: white;
+    font-weight: 800;
+    padding: .7rem 1.5rem;
+}
+
+.btn-poppy:hover {
+    background: #C86691;
+    color: white;
+}
+
+.soft-panel {
+    background: white;
+    border: 1px solid #F2DCE5;
+    border-radius: 1.5rem;
+}
+
+.site-footer {
+    background: #F9E3EA;
+}
+
+.admin-sidebar {
+    background: white;
+    border: 1px solid #F2DCE5;
+    border-radius: 1rem;
+}
+
+/* =================================
+   PRODUCT IMAGE STYLES
+================================= */
+
+.product-image-wrapper {
+    width: 100%;
+    height: 190px;
+    background-color: var(--cream);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 12px;
+    transition: transform 0.3s ease;
+}
+
+.product-image-wrapper:hover .product-image {
+    transform: scale(1.05);
+}
+
+.product-image-placeholder {
+    font-size: 2.5rem;
+}
+
+/* =================================
+   PRODUCT CARD POLISH
+================================= */
+
+.card {
+    border-radius: 1rem;
+}
+
+.card-title {
+    color: #85566D;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+/* Responsive Product Images */
+@media (max-width: 576px) {
+    .product-image-wrapper {
+        height: 150px;
+    }
+
+    .card-body {
+        padding: .85rem;
+    }
+
+    .card-title {
+        font-size: .95rem;
+    }
+}
+
+/* =================================
+   SHARED TYPE, LAYOUT, MOBILE
+================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Nunito", system-ui, sans-serif !important;
+    font-size: 16.5px;
+    line-height: 1.65;
+    overflow-x: hidden;
+    background:
+        radial-gradient(920px 420px at 110% -8%, rgba(247, 201, 217, .55), transparent 58%),
+        radial-gradient(720px 380px at -12% 8%, rgba(217, 201, 243, .42), transparent 55%),
+        var(--cream);
+}
+
+h1, h2, h3, h4, h5,
+.section-title,
+.brand-name,
+.footer-brand,
+.home-hero h1,
+.shop-head .section-title,
+.cart-head .section-title,
+.checkout-head .section-title,
+.product-info .section-title,
+.confirm-hero .section-title,
+.admin-login-head h1,
+.dash-hero h1,
+.summary-head,
+.form-card .card-head,
+.confirm-card .card-head,
+.orders-card .card-head h4 {
+    font-family: "Fraunces", Georgia, serif !important;
+    letter-spacing: -0.02em;
+}
+
+p, .lead, .nav-link, .btn, button, input, select, textarea, label, .card-title, .price {
+    font-family: "Nunito", system-ui, sans-serif;
+}
+
+img, svg, video {
+    max-width: 100%;
+}
+
+.container {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+}
+
+input, select, textarea, .form-control, .form-select {
+    font-size: 16px !important;
+}
+
+.btn, .btn-poppy, .btn-checkout, .btn-add-cart, .btn-sign-in {
+    min-height: 44px;
+}
+
+.product-crumb,
+.item-name,
+.card-title,
+.order-num {
+    overflow-wrap: anywhere;
+}
+
+a.stretched-card {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+}
+
+a.stretched-card:hover .card-title {
+    color: var(--poppy);
+}
+
+@media (max-width: 767.98px) {
+    .home-hero {
+        padding: 2.4rem 1.1rem !important;
+        border-radius: 1.25rem !important;
+    }
+
+    .home-hero h1,
+    .display-4 {
+        font-size: clamp(1.85rem, 8vw, 2.4rem) !important;
+        line-height: 1.15 !important;
+    }
+
+    .home-hero .lead {
+        font-size: 1rem !important;
+    }
+
+    .filter-bar .col-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .product-card:hover,
+    .cart-item:hover,
+    .product-media:hover img {
+        transform: none !important;
+    }
+
+    .btn-add-cart {
+        width: 100%;
+    }
+
+    .product-page .row {
+        --bs-gutter-y: 1.25rem;
+    }
+
+    .checkout-steps {
+        gap: .35rem .5rem;
+    }
+
+    .back-to-top {
+        bottom: max(1rem, env(safe-area-inset-bottom));
+        right: 1rem;
+    }
+
+    .site-footer .footer-content {
+        padding-top: 2.5rem !important;
+        padding-bottom: 2.25rem !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    main.container {
+        padding-top: 1.35rem !important;
+    }
+
+    .summary-card .summary-body,
+    .form-card .card-body,
+    .confirm-card .card-body {
+        padding: 1rem !important;
+    }
+
+    .payment-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (hover: none) {
+    .product-card:hover,
+    .cart-item:hover {
+        transform: none;
+        box-shadow: 0 4px 14px rgba(117, 76, 97, .06);
+    }
+}
